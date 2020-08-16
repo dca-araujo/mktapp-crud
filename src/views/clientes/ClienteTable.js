@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
   CButton,
   CRow,
@@ -9,9 +9,9 @@ import {
   CModalFooter,
   CModalHeader,
   CModalTitle
-} from '@coreui/react'
-import * as moment from 'moment'
-import api from '../../services/api'
+} from '@coreui/react';
+import * as moment from 'moment';
+import api from '../../services/api';
 
 const getBadge = (status, field) => {
   if(field === 'color'){
@@ -52,10 +52,9 @@ class Clientes extends Component {
   }
 
   destroyData = async (e) => {
-    await api.delete(`cliente/${e.target.dataset.id}`);
-    this.loadData();
-    
+    await api.delete(`cliente/${e.target.dataset.id}`);    
     this.setState({modal: !this.state.modal});
+    this.props.refreshClienteTable();
   }
 
   toggle = () => {
