@@ -3,11 +3,11 @@ export default [
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: 'cil-speedometer',
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    }
+    icon: 'cil-graph'
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // }
   },
   {
     _tag: 'CSidebarNavTitle',
@@ -17,7 +17,7 @@ export default [
     _tag: 'CSidebarNavDropdown',
     name: 'Clientes',
     route: '/clientes',
-    icon: 'cil-minus',
+    icon: 'cil-user',
     _children: [
       {
         _tag: 'CSidebarNavItem',
@@ -35,7 +35,7 @@ export default [
     _tag: 'CSidebarNavDropdown',
     name: 'Empresa',
     route: '/empresa',
-    icon: 'cil-minus',
+    icon: 'cil-building',
     _children: [
     //   {
     //     _tag: 'CSidebarNavItem',
@@ -53,7 +53,7 @@ export default [
     _tag: 'CSidebarNavDropdown',
     name: 'Produtos',
     route: '/produtos',
-    icon: 'cil-minus',
+    icon: 'cil-cart',
     _children: [
       {
         _tag: 'CSidebarNavItem',
@@ -75,7 +75,7 @@ export default [
     _tag: 'CSidebarNavDropdown',
     name: 'Configurações',
     route: '/base',
-    icon: 'cil-minus',
+    icon: 'cil-cog',
     _children: [
       {
         _tag: 'CSidebarNavItem',
