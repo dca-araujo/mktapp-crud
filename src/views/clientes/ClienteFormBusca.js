@@ -19,7 +19,8 @@ import * as moment from 'moment';
 import Loader from "../widgets/loader";
 import { Formik, Form } from 'formik';
 
-const ClienteForm = ({collapsed, setCollapsed, refreshClienteBusca}) => {
+const ClienteForm = ({setLoaded, refreshClienteBusca}) => {
+  const [collapsed, setCollapsed] = React.useState(true)
   const [ClienteDOM, setClienteDOM] = React.useState({});
   const [loading, setLoading] = React.useState(false);
   const onChange = (atributo, valor) => {
@@ -31,7 +32,8 @@ const ClienteForm = ({collapsed, setCollapsed, refreshClienteBusca}) => {
 
   const handleSubmit = async(event) => {
     try {
-      setCollapsed(!collapsed)
+      setCollapsed(!collapsed);
+      setLoaded(false);
       setLoading(true);
       refreshClienteBusca(event);
     } catch(e) {

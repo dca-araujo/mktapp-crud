@@ -16,15 +16,15 @@ import api from '../../services/api';
 const getBadge = (status, field) => {
   if(field === 'color'){
     switch (status) {
-      case '1': return 'success'
-      case '0': return 'danger'
-      default: return 'primary'
+      case '1': return 'success';
+      case '0': return 'danger';
+      default: return 'primary';
     }
   } else {
     switch (status) {
-      case '1': return 'Ativo'
-      case '0': return 'Inativo'
-      default: return 'Indefinido'
+      case '1': return 'Ativo';
+      case '0': return 'Inativo';
+      default: return 'Indefinido';
     }
   }
 }

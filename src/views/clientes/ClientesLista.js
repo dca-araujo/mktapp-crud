@@ -13,25 +13,25 @@ import ClienteTable from  './ClienteTable';
 import ClienteForm from './ClienteForm';
 
 const BasicForms = () => {
-  const [collapsed, setCollapsed] = React.useState(false)
-  const [cliente, setCliente] = React.useState({})
-  const [clienteList, setClienteList] = React.useState([])
-  const [loadStatus, setloadStatus] = React.useState(true)
+  const [collapsed, setCollapsed] = React.useState(false);
+  const [cliente, setCliente] = React.useState({});
+  const [clienteList, setClienteList] = React.useState([]);
+  const [loadStatus, setloadStatus] = React.useState(true);
 
   React.useEffect(() => {
     loadData();
-  }, [])
+  }, []);
 
   const loadData = async () => {
     try{
-      setloadStatus(true)
-      const response = await api.get('cliente')
-      setClienteList(response.data)
+      setloadStatus(true);
+      const response = await api.get('cliente');
+      setClienteList(response.data);
     }catch(e) {
       console.log(e);
     }
         
-    setloadStatus(false)
+    setloadStatus(false);
   }
 
   return (

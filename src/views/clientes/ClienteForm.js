@@ -36,8 +36,6 @@ const ClienteForm = ({collapsed, setCollapsed, cliente, refreshClienteTable}) =>
     });
   };
 
-  // Object.entries(ClienteDOM).length
-
   React.useEffect(() => {
     setClienteDOM(cliente);
   }, [cliente]);
